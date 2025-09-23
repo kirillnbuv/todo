@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To Do App (v6-08)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      
+      <div class="autosave-box">
+        <label>Auto Save</label>
+        <label class="toggle">
+          <input type="checkbox" id="autosaveToggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <h1>To Do App (v6-08)</h1>
+
+      <div class="controls">
+        <input id="taskInput" type="text" placeholder="Enter a task here" maxlength="100" />
+        <div id="saveDiv" class="divbtn primary" role="button" tabindex="0">SAVE</div>
+        <div id="getDiv" class="divbtn warning" role="button" tabindex="0">GET TASKS</div>
+        <div id="exportDiv" class="divbtn purple" role="button" tabindex="0">EXPORT</div>
+        <div id="importDiv" class="divbtn teal" role="button" tabindex="0">IMPORT</div>
+        <input type="file" id="importFile" accept=".txt" style="display:none" />
+      </div>
+      
+      <div id="errorMessage" class="error-message"></div>
+
+      <table aria-label="Task List">
+        <colgroup>
+          <col />
+          <col />
+          <col />
+          <col />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Todo item</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr class="empty"><td colspan="4">No tasks at the moment</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
